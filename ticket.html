@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <style>
+            table {
+                border: 1px solid black;
+                border-collapse: collapse;
+                margin: 0 left;
+            }
+            th,
+            td {
+                width: 120px;
+                border: 1px solid black;
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body onload="startTime()">
+            <label for="name">고객 성명 </label>
+            <input type="text" name="user_name" id="user_name" />
+            <input type="submit" value="합계" class="right" onclick="Ticketnumber()"/>
+
+            <table>
+                <tr>
+                    <!--테이블 첫째 줄-->
+                    <th>No</th>
+                    <th colspan="2">구분</th>
+                    <th colspan="2">어린이</th>
+                    <th colspan="2">어른</th>
+                    <th colspan="2">비고</th>
+                </tr>
+                <tr>
+                    <!--테이블 둘째 줄-->
+                    <td>1</td>
+                    <td colspan="2">입장권</td>
+                    <td class="cost" data-value="7000">7,000</td>
+                    <td>
+                        <select name="today_child_permit" class="ticket">
+                            <option value="0" selected>0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td class="cost" data-value="10000"> 10,000</td>
+                    <td>
+                        <select name="today_adult_permit" class="ticket">
+                            <option value="0" selected>0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td>입장</td>
+                </tr>
+                <tr>
+                    <!--테이블 셋째 줄-->
+                    <td>2</td>
+                    <td colspan="2">BIG3</td>
+                    <td class="cost" data-value="12000"> 12,000</td>
+                    <td>
+                        <select name="BIG3_child_permit" class="ticket">
+                            <option value="0" selected>0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td class="cost" data-value="16000"> 16,000</td>
+                    <td>
+                        <select name="BIG3_adult_permit" class="ticket">
+                            <option value="0" selected>0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td>입장+놀이3종</td>
+                </tr>
+                <tr>
+                    <!--테이블 넷째 줄-->
+                    <td>3</td>
+                    <td colspan="2">자유이용권</td>
+                    <td class="cost" data-value="21000"> 21,000</td>
+                    <td>
+                        <select name="free_child_permit" class="ticket">
+                            <option value="0" selected>0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td class="cost" data-value="26000"> 26,000</td>
+                    <td>
+                        <select name="free_adult_permit" class="ticket">
+                            <option value="0" selected>0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td>입장+놀이자유</td>
+                </tr>
+                <tr>
+                    <!--테이블 다섯째 줄-->
+                    <td>4</td>
+                    <td colspan="2">연간이용권</td>
+                    <td class="cost" data-value="70000"> 70,000</td>
+                    <td>
+                        <select name="year_child_permit" class="ticket">
+                            <option value="0" selected>0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td class="cost" data-value="90000"> 90,000</td>
+                    <td>
+                        <select name="year_adult_permit" class="ticket">
+                            <option value="0" selected>0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td>입장+놀이자유</td>
+                </tr>
+            </table>
+            <br /><br />
+        </form>
+        <div id="txt"></div>
+
+
+        <div id="output"></div>
+        <div id="ticket1"></div>
+        <div id="ticket2"></div>
+        <div id="ticket3"></div>
+        <div id="ticket4"></div>
+        <div id="ticket5"></div>
+        <div id="ticket6"></div>
+        <div id="ticket7"></div>
+        <div id="ticket8"></div>
+        <div id="total"></div>
+
+        <script src="ticket.js"></script>
+    </body>
+</html>
